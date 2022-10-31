@@ -124,7 +124,7 @@ const Counter = () => {
 ```js [3-4|5-6|8|10]
 test('increase value when click increase', () => {
   const { getByRole } = render(<Counter />)
-  const increase = getByRole('increase', {name: /increase/i})
+  const increase = getByRole('button', {name: /increase/i})
   const counter = getByRole('presentation', {name: /counter/i})
   
   userEvent.click(increase)
