@@ -63,7 +63,7 @@ between test code and implementation code
 
 Counter component
 
-```jsx
+```jsx [|2|4-5,8-10|9|5|2|8]
 const Counter = () => {
   const [count, setCount] = useState(0)
 
