@@ -84,8 +84,8 @@ const Counter = () => {
 test('increase value when click increase', () => {
   const container = render(<Counter />)
   const counter = container.querySelector('span')
-  const button = container.querySelectorAll('button')
-  button[0].click()
+  const increase = container.querySelectorAll('button').find(el => el.textContent === 'Increase')
+  increase.click()
   expect(counter.textContent).toBe('Counter: 1')
 })
 ```
