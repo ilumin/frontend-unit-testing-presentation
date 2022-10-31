@@ -272,6 +272,32 @@ Shared dependency in Frontend
 
 Mock Service Worker
 
+///
+
+```jsx [|10-17|12|15|10|4-8|6|7|16]
+const GreetingLoader = () => {
+  const [greeting, setGreeting] = useState('')
+
+  const loadGreetingForInput = async event => {
+    event.preventDefault()
+    const { data } = await loadGreeting(event.target.elements.name.value)
+    setGreeting(data.greeting)
+  }
+  return (
+    <form onSubmit={loadGreetingForInput}>
+      <label htmlFor="name">
+        <input id="name" />
+        Name
+      </label>
+      <button type="submit">Load Greeting</button>
+      <div aria-label="greeting">{greeting}</div>
+    </form>
+  )
+}
+```
+
+///
+
 ```jsx [|2|3-6|7-9]
 test('loads greetings on click', async () => {
   render(<GreetingLoader />)
@@ -292,7 +318,7 @@ import {rest} from 'msw'
 import {setupServer} from 'msw/node'
 
 const server = setupServer(
-  rest.post('/greeing', (req, res, ctx) => 
+  rest.post('/greeting', (req, res, ctx) => 
     res(ctx.json({data: {greeting: `Hello ${req.body.subject}`}}))
   ),
 )
