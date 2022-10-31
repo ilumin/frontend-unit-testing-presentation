@@ -42,8 +42,8 @@ Why I want to share this?
 ### unit test that
 
 - Prevent regression
-- Maintainability
 - Fast feedback
+- Maintainability
 
 ---
 
