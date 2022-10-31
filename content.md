@@ -83,10 +83,10 @@ const Counter = () => {
 ```js [1-7|3|4|5|6|3-6]
 test('increase value when click increase', () => {
   const container = render(<Counter />)
-  const message = container.querySelector('span')
+  const counter = container.querySelector('span')
   const button = container.querySelectorAll('button')
   button[0].click()
-  expect(input.textContent).toBe('Counter: 1')
+  expect(counter.textContent).toBe('Counter: 1')
 })
 ```
 
