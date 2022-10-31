@@ -173,10 +173,12 @@ you can use `toMatchInlineSnapshot`
 
 ```jsx []
 it('renders correctly', () => {
-  const tree = renderer
-    .create(<Link page="https://example.com">Example Site</Link>)
-    .toJSON();
-  expect(tree).toMatchInlineSnapshot(⭐️);
+  const {getByRole} = render(<Counter />)
+  const increase = getByRole('button', { 
+    name: /increase/i
+  })
+
+  expect(increase.textContent).toMatchInlineSnapshot(⭐️);
 });
 ```
 
