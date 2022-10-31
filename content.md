@@ -135,7 +135,7 @@ test('increase value when click increase', () => {
 
 ///
 
-```jsx [|2|4-5,8-10|9|5|2|8]
+```jsx [|10,12,13]
 const Counter = () => {
   const [count, setCount] = useState(0)
 
@@ -152,17 +152,6 @@ const Counter = () => {
   </div>
 }
 ```
-
-///
-
-### [Query Priority](https://testing-library.com/docs/queries/about/#priority)
-
-1. Queries Accessible for Everyone
-   - `getByRole`
-   - ...
-2. Semantic Quries
-3. TestIDs
-   - `getByTestId`
 
 ---
 
