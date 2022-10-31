@@ -71,7 +71,7 @@ const Counter = () => {
   const increase = () => setCount(c => c + 1)
 
   return <div>
-    <input type="text" readonly value={count}>
+    <span>Counter: {count}</span>
     <button onClick={increase}>Increse</button>
     <button onClick={decrease}>Decrese</button>
   </div>
@@ -83,10 +83,10 @@ const Counter = () => {
 ```js [1-7|3|4|5|6|3-6]
 test('increase value when click increase', () => {
   const container = render(<Counter />)
-  const input = container.querySelector('input')
+  const message = container.querySelector('span')
   const button = container.querySelectorAll('button')
   button[0].click()
-  expect(input.value).toBe(1)
+  expect(input.textContent).toBe('Counter: 1')
 })
 ```
 
