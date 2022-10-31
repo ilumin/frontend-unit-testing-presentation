@@ -20,7 +20,7 @@ Why I want to share this?
 ### I experienced
 
 - fixing lot of test code when refactor
-- writing too much test code 
+- writing too much test code
 - code that hard to test
 
 ///
@@ -57,7 +57,7 @@ I suggested
 
 <small>(nickname: [avoid testing implementation detail](https://kentcdodds.com/blog/testing-implementation-details))</small>
 
-between test code and implementation detail
+between test code and implementation code
 
 ///
 
