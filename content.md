@@ -92,7 +92,7 @@ test('increase value when click increase', () => {
 
 ///
 
-```jsx [8-20|11,15,16]
+```jsx [|2-5|8-20|11,15,16]
 const Counter = () => {
   const [count, setCount] = useState(0)
 
