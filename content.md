@@ -347,7 +347,7 @@ test('loads greetings on click', async () => {
 
 ## ⏳ What's Next?
 
-- [feedback](https://forms.gle/8NjQhZNQWvSB3nvJ6)
+- feedback
 - unit testing with Storybook (unit and integrate level)
 
 ---
