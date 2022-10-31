@@ -135,6 +135,26 @@ test('increase value when click increase', () => {
 
 ///
 
+```jsx [|2|4-5,8-10|9|5|2|8]
+const Counter = () => {
+  const [count, setCount] = useState(0)
+
+  const decrease = () => setCount(c => c - 1)
+  const increase = () => setCount(c => c + 1)
+
+  return <div>
+    <span>
+      Counter: 
+      <span role="presentation" aria-label="counter">{count}</span>
+    </span>
+    <button aria-label="increase" onClick={increase}>Increse</button>
+    <button aria-label="decrease" onClick={decrease}>Decrese</button>
+  </div>
+}
+```
+
+///
+
 ### [Query Priority](https://testing-library.com/docs/queries/about/#priority)
 
 1. Queries Accessible for Everyone
